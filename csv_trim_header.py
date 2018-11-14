@@ -6,7 +6,7 @@ with open(in_file, "rt", encoding="Shift_JIS") as fr:
     lines = fr.readlines()
 
 #ヘッダーを削ぎ落として新たなヘッダーをつける。
-lines = ["年, 月, 日, 気温, 品質, 均質 \n"] + lines[5:]
+lines = ["年,月,日,気温,品質,均質 \n"] + lines[5:]
 lines = map(lambda v: v.replace('/', ','),lines)
 print(result)
 
